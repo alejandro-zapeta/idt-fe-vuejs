@@ -21,7 +21,7 @@ import State from './components/State.vue'
 import { ref, computed } from 'vue'
 
 //const hostname = process.env.API_ENDPOINT ? 
-const hostname = "http://localhost:8888/api/"
+const hostname = "http://95.111.230.5:9092/api/"
 const states = ref(null)
 const stateSelected = ref(null)
 const strFilter = ref("")
@@ -30,7 +30,7 @@ const filteredStates = computed(() => {
   if (!strFilter.value) {
     return states.value
   }
-  return states.value.filter(state => state.state.toLowerCase().includes(strFilter.value));
+  return states.value.filter(state => state.state.toLowerCase().includes(strFilter.value.toLowerCase()));
 })
 
 const handleSelectItem = (item) => {

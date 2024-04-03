@@ -1,5 +1,6 @@
 <script>
-const hostname = "http://localhost:8888/api/"
+const hostname = "http://95.111.230.5:9092/api/"
+
 export default {
   name: 'StateItem',
   props: {
